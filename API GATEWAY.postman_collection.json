@@ -1,0 +1,1182 @@
+{
+	"info": {
+		"_postman_id": "247b7883-0769-486d-a818-e22d476c6aa1",
+		"name": "API GATEWAY",
+		"description": "The API GATEWAY for the application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12432848"
+	},
+	"item": [
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "customer",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Customer Controller find One Customer",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/customer/customer/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"customer",
+												"customer",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<number>",
+													"description": "(Required) ",
+													"uuid": "d9c50d41-debb-42ab-a5e9-a4f4456761e6"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Untitled Response",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/customer/customer/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"customer",
+														"customer",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Customer Controller delete Customer",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/customer/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"customer",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<number>",
+											"description": "(Required) ",
+											"uuid": "4b6bbb94-790d-4fee-8c9b-fce1b1697f0f"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/customer/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"customer",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Customer Controller create Customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"uuid": "e99aa716-8c6e-4bbf-b874-ecd5ef29f674"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"<number>\",\n  \"name\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/customer",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"userId\": \"<number>\",\n  \"name\": \"<string>\",\n  \"lastName\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"address\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/customer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"customer"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Order Controller find Payment By Order Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/order/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"order",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<number>",
+											"description": "(Required) ",
+											"uuid": "eafd5e1f-b8de-44be-bfc4-51960fb8069d"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/order/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"order",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Order Controller delete Order",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/order/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"order",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<number>",
+											"description": "(Required) ",
+											"uuid": "65de3847-8ce3-48ee-be20-e7352be7f8a4"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/order/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"order",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Order Controller create Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"uuid": "3bb97be7-fc16-43c8-9d22-1d84bdc5655c"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"<number>\",\n  \"products\": [\n    {\n      \"productId\": \"<number>\",\n      \"quantity\": \"<number>\",\n      \"price\": \"<number>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"productId\": \"<number>\",\n      \"quantity\": \"<number>\",\n      \"price\": \"<number>\",\n      \"name\": \"<string>\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/order",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"userId\": \"<number>\",\n  \"products\": [\n    {\n      \"productId\": \"<number>\",\n      \"quantity\": \"<number>\",\n      \"price\": \"<number>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"productId\": \"<number>\",\n      \"quantity\": \"<number>\",\n      \"price\": \"<number>\",\n      \"name\": \"<string>\"\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/order",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"order"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "payment",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Payment Controller find Payment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/payment/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"payment",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<number>",
+											"description": "(Required) ",
+											"uuid": "a3bf2a33-552d-4901-8994-b0cd2782bd18"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/payment/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"payment",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Payment Controller find All Payments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/payment",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"payment"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/payment",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"payment"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Payment Controller create Payment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"uuid": "4c0021c0-735d-45d9-93fc-c9b3bc853a59"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"orderId\": \"<number>\",\n  \"amount\": \"<number>\",\n  \"creditCardNumber\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/payment",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"payment"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"orderId\": \"<number>\",\n  \"amount\": \"<number>\",\n  \"creditCardNumber\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/payment",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"payment"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "authentication",
+			"item": [
+				{
+					"name": "login",
+					"item": [
+						{
+							"name": "Authentication Controller login",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"uuid": "6dc8d91e-d76f-4caf-9c1d-3b8d6c1345e0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/authentication/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"username\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/authentication/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"authentication",
+												"login"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "signup",
+					"item": [
+						{
+							"name": "Authentication Controller signup",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"uuid": "474f34a0-6cef-4b61-8b58-930e2d126f56"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"<string>\",\n  \"username\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/authentication/signup",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication",
+										"signup"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"username\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/authentication/signup",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"authentication",
+												"signup"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "validate",
+					"item": [
+						{
+							"name": "Authentication Controller validate Token",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"uuid": "dd45d38b-7847-4bc1-9b3d-9aa149754e10"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"token\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/authentication/validate",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication",
+										"validate"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"token\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/authentication/validate",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"authentication",
+												"validate"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "Authentication Controller find All Users",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/authentication/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication",
+										"users"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/authentication/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"authentication",
+												"users"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Product Controller find One Product",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bearerToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/product/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<number>",
+											"description": "(Required) ",
+											"uuid": "d1847197-2ac5-4ee0-927f-853d6e9f4fd7"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: bearer",
+												"key": "Authorization",
+												"value": "Bearer <token>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/product/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Product Controller find All Products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/product",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: bearer",
+										"key": "Authorization",
+										"value": "Bearer <token>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/product",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "api/v1"
+		}
+	]
+}
