@@ -2,6 +2,8 @@
 
 Este proyecto consta de una arquitectura de microservicios desarrollada en NestJS, que proporciona una solución escalable y modular para una aplicación de carrito de compras. Los microservicios se comunican a través de TCP y están organizados en directorios separados dentro del repositorio.
 
+Importante: Como base de datos se esta usando PostgreSql 16 y NodeJS 20 
+
 ## Estructura del Proyecto
 
 El repositorio contiene los siguientes directorios principales:
